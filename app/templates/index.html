@@ -8,6 +8,27 @@
 </head>
 <body>
     <h1>News api</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quo, quasi adipisci, temporibus quae voluptas incidunt sit sequi rem inventore esse eveniet cumque fuga illo omnis suscipit quos. Eius, quis!</p>
+    {%for news,description,link,i,time,content in context%}
+    <div>
+        <h2>NEWS</h2>{{news}}
+        
+
+    </div>
+    <div>
+        <h3>DESCRIPTION</h3>{{description}}
+    </div>
+    <div>
+        <h4>LINK</h4>{{link}}
+    </div>
+    <div>
+        <img src="{{i}}" alt="">
+    </div>
+    <div>
+        <h5>TIME</h5>{{time}}
+    </div>
+    <div>
+        <h6>CONTENT</h6>{{content}}
+    </div>
+    {%endfor%}
 </body>
 </html>
