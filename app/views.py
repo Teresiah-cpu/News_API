@@ -6,7 +6,7 @@ from newsapi import NewsApiClient
 app = Flask (__name__)
 @app.route('/')
 def index():
-    newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
+    # newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
     topheadlines =newapi.get_top_headlines(sources="News24"
 )
     articles =topheadlines['articles'] 
