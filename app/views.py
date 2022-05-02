@@ -30,11 +30,70 @@ def bbc():
         time.append(myarticles['publishedAt'])
         content.append(myarticles['content'])
         
-
         my_list =zip( news,description,link,image,time,content)
 
 
     return render_template('bbc.html',context=my_list)
+
+
+    #GOOGLE NEWS
+@app.route('/google') 
+def google():   
+    newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
+    topheadlines =newapi.get_top_headlines(sources="IGN"
+)
+    articles =topheadlines['articles'] 
+    news = []
+    description = []
+    link = []
+    image = []
+    time = []
+    content = []
+
+    for i in range(len(articles)):
+        myarticles =articles[i]
+        news.append(myarticles['title'])
+        description.append(myarticles['description'])
+        link.append(myarticles['url'])
+        image.append(myarticles['urlToImage'])
+        time.append(myarticles['publishedAt'])
+        content.append(myarticles['content'])
+        
+
+        my_list =zip( news,description,link,image,time,content)
+
+
+    return render_template('google.html',context=my_list)
+#globo news
+
+@app.route('/cnn') 
+def cnn():   
+    newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
+    topheadlines =newapi.get_top_headlines(sources="CNN"
+)
+    articles =topheadlines['articles'] 
+    news = []
+    description = []
+    link = []
+    image = []
+    time = []
+    content = []
+
+    for i in range(len(articles)):
+        myarticles =articles[i]
+        news.append(myarticles['title'])
+        description.append(myarticles['description'])
+        link.append(myarticles['url'])
+        image.append(myarticles['urlToImage'])
+        time.append(myarticles['publishedAt'])
+        content.append(myarticles['content'])
+        
+        my_list =zip( news,description,link,image,time,content)
+
+
+    return render_template('cnn.html',context=my_list)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
