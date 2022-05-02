@@ -4,31 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}">
     <title>Document</title>
 </head>
 <body>
-    <h1>News api</h1>
-    {%for news,description,link,i,time,content in context%}
-    <div>
-        <h2>NEWS</h2>{{news}}
+        <div class="navbar">
+            <ul>
+                <li> <a href="#">BBC</a></li>
+                <li> <a href="#">CNN</a></li>
+                <li> <a href="#">ALJAZEERA</a></li>
+                <li> <a href="#">SUPERSPORT</a></li>
+                
         
-
-    </div>
-    <div>
-        <h3>DESCRIPTION</h3>{{description}}
-    </div>
-    <div>
-        <h4>LINK</h4>{{link}}
-    </div>
-    <div>
-        <img src="{{i}}" alt="">
-    </div>
-    <div>
-        <h5>TIME</h5>{{time}}
-    </div>
-    <div>
-        <h6>CONTENT</h6>{{content}}
-    </div>
-    {%endfor%}
+        
+            </ul>
+        
+        </div>
 </body>
 </html>
