@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+ul li {
+    display: inline;
+    text-decoration: none;
+
+}
+ul li a{
+    text-decoration: none;
+    padding: 5px;
+    float: right;
+}
