@@ -6,6 +6,10 @@ from newsapi import NewsApiClient
 app = Flask (__name__)
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/bbc') 
+def bbc():   
     newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
     topheadlines =newapi.get_top_headlines(sources="News24"
 )
@@ -30,7 +34,7 @@ def index():
         my_list =zip( news,description,link,image,time,content)
 
 
-    return render_template('index.html',context=my_list)
+    return render_template('bbc.html',context=my_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
