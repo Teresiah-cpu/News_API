@@ -36,7 +36,7 @@ def bbc():
     return render_template('bbc.html',context=my_list)
 
 
-    #GOOGLE NEWS
+
 @app.route('/google') 
 def google():   
     newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
@@ -64,7 +64,7 @@ def google():
 
 
     return render_template('google.html',context=my_list)
-#globo news
+
 
 @app.route('/cnn') 
 def cnn():   
