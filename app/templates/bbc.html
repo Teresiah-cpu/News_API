@@ -13,7 +13,20 @@
 <body>
     <h1>News api</h1>
     {%for news,description,link,i,time,content in context%}
-    <div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{i}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h2 class="card-title">NEWS</h2>{{news}}
+            <h5 class="card-title">TIME</h5>{{time}}
+            <h3 class="card-text">DESCRIPTION</h3>{{description}}
+            <h6 class="card-text">CONTENT</h6>{{content}}
+    
+        </div>
+        <div class="card-body">
+            <h4 class="card-link">LINK</h4>{{link}}
+        </div>
+    </div>
+    <!-- <div>
         <h2>NEWS</h2>{{news}}
 
 
@@ -32,7 +45,7 @@
     </div>
     <div>
         <h6>CONTENT</h6>{{content}}
-    </div>
+    </div> -->
     {%endfor%}
 </body>
 
