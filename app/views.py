@@ -9,7 +9,9 @@ def index():
     return render_template('index.html')
 
 @app.route('/bbc') 
-def bbc():   
+def bbc(): 
+#     api_key="9b1bbde4ec434625802e9867ef0aa86d"
+#     topheadlines =api_key.get_top_headlines(sources="News24")  
     newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
     topheadlines =newapi.get_top_headlines(sources="News24"
 )
@@ -38,7 +40,9 @@ def bbc():
 
 
 @app.route('/google') 
-def google():   
+def google():  
+    # api_key="9b1bbde4ec434625802e9867ef0aa86d"
+    # topheadlines =api_key.get_top_headlines(sources="IGN") 
     newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
     topheadlines =newapi.get_top_headlines(sources="IGN"
 )
@@ -68,6 +72,9 @@ def google():
 
 @app.route('/cnn') 
 def cnn():   
+    # api_key="9b1bbde4ec434625802e9867ef0aa86d"
+    # topheadlines =api_key.get_top_headlines(sources="CNN")
+
     newapi = NewsApiClient(api_key="9b1bbde4ec434625802e9867ef0aa86d")
     topheadlines =newapi.get_top_headlines(sources="CNN"
 )
