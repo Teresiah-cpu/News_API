@@ -23,7 +23,10 @@ ul li a{
 }
 .mycardimg{
     height: 200px;
-    
+
+}
+h1{
+    text-align: center;
 }
 .footer{
     text-align: center;
